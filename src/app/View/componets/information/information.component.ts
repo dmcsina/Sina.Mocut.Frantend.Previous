@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-information',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./information.component.css']
 })
 export class InformationComponent {
-
+  constructor(public router :Router){}
+  step(){
+    this.router.navigate(['home']);
+  }
 }

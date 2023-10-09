@@ -73,7 +73,7 @@ $my-palette2: (
 $my-primary: mat.define-palette($my-palette1, 500);
 $my-accent: mat.define-palette($my-palette2, 500);
 
-$my-theme: mat.define-light-theme((
+$my-theme: mat.define-dark-theme((
  color: (
    primary: $my-primary,
    accent: $my-accent,

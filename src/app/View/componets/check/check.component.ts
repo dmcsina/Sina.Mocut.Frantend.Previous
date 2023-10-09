@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-check',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./check.component.css']
 })
 export class CheckComponent {
-
+  constructor(public router:Router){}
+  hide=true;
+  step(){
+   this.router.navigate(['login/code']);
+  }
 }
