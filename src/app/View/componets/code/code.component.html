@@ -3,11 +3,13 @@
         <p class="text">کد ارسال شده را وارد کنید</p>
     </div>
     <div class="mat">
+        <form action="" [formGroup]="form.formLogin">
         <mat-form-field appearance="outline">
             <mat-label class="text"> کد را وارد کنید</mat-label>
-            <input matInput >
+            <input formControlName="code" matInput >
             <mat-icon  matSuffix>key</mat-icon>
           </mat-form-field>
+          </form>
     </div>
     <div class="counter">
         <p class="text">60 ثانیه تا ارسال مجدد کد </p>

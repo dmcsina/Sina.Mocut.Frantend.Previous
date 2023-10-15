@@ -6,6 +6,7 @@ import { CheckComponent } from './View/componets/check/check.component';
 import { CodeComponent } from './View/componets/code/code.component';
 import { InformationComponent } from './View/componets/information/information.component';
 import { LoginModule } from './+Controlls/routers/loginrouter/login/login.module';
+import { SinginComponent } from './View/componets/singin/singin.component';
 
 const routes: Routes = [
   {path:'home',component:MainComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'check',component:CheckComponent},
     {path:'code',component:CodeComponent},
     {path:'singup',component:InformationComponent},
+    {path:'singin',component:SinginComponent},
   ]
   },
   {path:'',redirectTo:'/home',pathMatch:'full'},

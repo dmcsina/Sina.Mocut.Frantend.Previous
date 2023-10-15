@@ -6,7 +6,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { LoginComponent } from './View/pages/login/login.component';
 import { CheckComponent } from './View/componets/check/check.component';
 import { CodeComponent } from './View/componets/code/code.component';
 import { InformationComponent } from './View/componets/information/information.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SinginComponent } from './View/componets/singin/singin.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { InformationComponent } from './View/componets/information/information.c
     LoginComponent,
     CheckComponent,
     CodeComponent,
-    InformationComponent
+    InformationComponent,
+    SinginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,8 @@ import { InformationComponent } from './View/componets/information/information.c
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

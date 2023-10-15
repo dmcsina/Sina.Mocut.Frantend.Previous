@@ -2,17 +2,19 @@
     <div dir="rtl" >
         <p class="text">لطفا فرم زیر را کامل کنید </p>
     </div>
-    <div class="mat" dir="rtl">
+    <div dir="rtl">
+        <form action="" [formGroup]="form.formLogin" class="mat" >
         <mat-form-field appearance="outline">
             <mat-label class="text">نام کامل</mat-label>
-            <input matInput >
+            <input formControlName="name" matInput >
             <mat-icon  matSuffix>username</mat-icon>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label class="text">رمز عبور</mat-label>
-            <input matInput >
+            <input formControlName="password" matInput >
             <mat-icon  matSuffix>key</mat-icon>
           </mat-form-field>
+          </form>
     </div>
     <div class="button">
         <button class="bud" (click)="step()" mat-button color="primary">ادامه </button>

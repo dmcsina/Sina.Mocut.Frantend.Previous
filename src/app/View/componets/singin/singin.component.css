@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Iran;
+    src: url(./../../../../assets/fonts/IRANSans.woff2);
+}
+.text{
+    font-family: Iran;
+    color: #dae5eb;
+    margin-right: 3vw;
+}
+.box{
+    display: grid;
+    grid-template-columns: 40vw;
+    justify-content: center;
+    gap: 5vh;
+}
+.bud{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+}
+.bud button{
+    width: 40vw;
+    height: 8vh;
+    font-family: Iran;
+    font-weight:650;
+    font-size: 1.1rem;
+    border: #dae5eb solid 3px;
+}

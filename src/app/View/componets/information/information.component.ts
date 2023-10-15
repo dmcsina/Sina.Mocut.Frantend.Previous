@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Loginform } from 'src/app/Model/Forms/Loginform';
 
 @Component({
   selector: 'app-information',
@@ -8,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class InformationComponent {
   constructor(public router :Router){}
+  form=new Loginform;
   step(){
-    this.router.navigate(['home']);
+    this.router.navigate(['login/singin']);
   }
 }

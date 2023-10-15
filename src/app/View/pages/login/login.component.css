@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#dae5eb;;
 }
 .card{
     background-color: #161928;
