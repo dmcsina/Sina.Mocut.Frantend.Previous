@@ -4,15 +4,19 @@
     </div>
     <div dir="rtl">
         <form action="" [formGroup]="form.formLogin" class="mat" >
-        <mat-form-field appearance="outline">
-            <mat-label class="text">نام کامل</mat-label>
+        <mat-form-field appearance="outline" hideRequiredMarker="">
+            <mat-label class="lable">نام کامل</mat-label>
             <input formControlName="name" matInput >
             <mat-icon  matSuffix>username</mat-icon>
+            <mat-error *ngIf="form.formLogin.controls.name.hasError('required')"> اسم را وارد کنید</mat-error>
           </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label class="text">رمز عبور</mat-label>
-            <input formControlName="password" matInput >
-            <mat-icon  matSuffix>key</mat-icon>
+          <mat-form-field appearance="outline" hideRequiredMarker="">
+            <mat-label class="lable" >رمز عبور</mat-label>
+            <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="form.formLogin.controls.password.hasError('required')"> رمز عبور  را وارد کنید</mat-error>
           </mat-form-field>
           </form>
     </div>

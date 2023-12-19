@@ -8,10 +8,12 @@
     </div>
     <div class="mat" >
         <form class="example-form" [formGroup]="form.formLogin">
-            <mat-form-field class="input" appearance="outline" >
-              <mat-label class="text">شماره تماس</mat-label>
-              <span  class="text" matPrefix>+98 &nbsp;</span>
-              <input formControlName="phoneNumber" type="tel" matInput placeholder="09XXXXXXXXXXX">
+            <mat-form-field class="input" appearance="outline" hideRequiredMarker>
+              <mat-label  class="text">شماره تماس</mat-label>
+              <span  class="text" matPrefix> &nbsp;+98 &nbsp;</span>
+              <input  (keypress)="keypress.phonenumber($event)" formControlName="phoneNumber" type="tel" matInput placeholder="09XXXXXXXXXXX">
+              <mat-error *ngIf="form.formLogin.controls.phoneNumber.hasError('required')">لطفا شماره تماس را وارد کنید</mat-error>
+              <mat-error *ngIf="form.formLogin.controls.phoneNumber.hasError('pattern')">لطفا شماره تماس را درست وارد کنید</mat-error>
             </mat-form-field>
           </form>
     </div>

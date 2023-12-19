@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Keypress } from 'src/app/Model/Forms/Keypress';
 import { Loginform } from 'src/app/Model/Forms/Loginform';
 import { LoginService } from 'src/app/Model/Servises/login.service';
 
@@ -15,6 +16,7 @@ export class CheckComponent {
     ){}
   hide=true;
   form = new Loginform;
+  keypress= new Keypress;
   step(){
    this.router.navigate(['login/code']);
    console.log(this.form.formLogin.controls.phoneNumber.value);

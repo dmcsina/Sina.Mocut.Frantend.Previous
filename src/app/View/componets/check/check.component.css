@@ -2,6 +2,10 @@
     font-family: Iran;
     src: url(./../../../../assets/fonts/IRANSans.woff2);
 }
+.example-form mat-error{
+    font-family: Iran;
+    font-weight: 500;
+}
 .text{
     font-family: Iran;
     color: #dae5eb;

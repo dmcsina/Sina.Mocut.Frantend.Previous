@@ -3,17 +3,22 @@
         <p class="text">رمز عبور حساب کاربری خود را وارد کنید </p>
     </div>
     <form class="box" [formGroup]="form.formLogin">
-            <mat-form-field class="input" appearance="outline" >
-              <mat-label class="text">شماره تماس</mat-label>
-              <span  class="text" matPrefix>+98 &nbsp;</span>
+            <mat-form-field class="input" appearance="outline" hideRequiredMarker="" >
+              <mat-label class="lable">شماره تماس</mat-label>
+              <span   matPrefix>&nbsp; +98 &nbsp;</span>
               <input formControlName="phoneNumber" type="tel" matInput placeholder="09XXXXXXXXXXX">
+              <mat-error *ngIf="form.formLogin.controls.phoneNumber.hasError('required')"> رمز عبور  را وارد کنید</mat-error>
             </mat-form-field>
-          <mat-form-field appearance="outline" dir="rtl">
-            <mat-label class="text">رمز عبور</mat-label>
-            <input formControlName="password" matInput >
-            <mat-icon  matSuffix>key</mat-icon>
-          </mat-form-field>
+            <mat-form-field appearance="outline" hideRequiredMarker="" dir="rtl">
+              <mat-label class="lable">رمز عبور</mat-label>
+              <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="form.formLogin.controls.password.hasError('required')"> رمز عبور  را وارد کنید</mat-error>
+            </mat-form-field>
     </form>
+
     <div class="bud">
         <button  (click)="step()" mat-button color="primary">ادامه </button>
     </div>

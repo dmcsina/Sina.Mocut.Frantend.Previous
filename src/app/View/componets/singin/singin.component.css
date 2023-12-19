@@ -7,6 +7,29 @@
     color: #dae5eb;
     margin-right: 3vw;
 }
+.lable{
+
+    font-family: Iran;
+    color: #dae5eb;
+    font-size: 1rem;
+}
+همشون فایل ها برای کامپونت sing in 
+ css & html & typscript 
+ خودشون دارن 
+ حالا اگر بخوایم عنصری اضافع کنیم 
+ اول میریم متریال 
+ کدش کپی میکنیم
+span{
+    color: #dae5eb;
+    font-family: Iran;
+}
+mat-icon{
+    color: #dae5eb;
+}
+mat-error{
+    font-family: Iran;
+    font-weight: 600;
+}
 .box{
     display: grid;
     grid-template-columns: 40vw;

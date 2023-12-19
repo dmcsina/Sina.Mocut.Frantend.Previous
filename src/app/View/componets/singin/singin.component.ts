@@ -11,7 +11,7 @@ import { Loginform } from 'src/app/Model/Forms/Loginform';
 export class SinginComponent {
   constructor(public rout:Router){}
     form =new Loginform
-
+  hide=true;
     step(){
       this.rout.navigate(['home']);
     }
